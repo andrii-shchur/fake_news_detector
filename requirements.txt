@@ -1,0 +1,5 @@
+fastapi~=0.95.2
+pydantic~=1.10.8
+nltk~=3.8.1
+numpy~=1.23.5
+tensorflow~=2.12.0
