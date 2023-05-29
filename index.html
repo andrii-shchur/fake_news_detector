@@ -42,8 +42,8 @@
                 data: JSON.stringify({ title: title, text: text }),
                 contentType: "application/json",
                 success: function(response) {
-                    const verdict = response.detection > 0.5 ? "Fake" : "False"
-                    $("#result").html(`<h4>Verdict: <span class="badge badge-primary">${verdict}</span></h4>`);
+                    const result = response.detection > 0.5 ? "Fake" : "False"
+                    $("#result").html(`<h4>Verdict: <span class="badge badge-primary">${result}</span></h4>`);
                 },
             });
 
