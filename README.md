@@ -21,6 +21,11 @@ pipenv install
 ```
 
 # Run application
+Switch to `pipenv` shell
+```
+pipenv shell
+```
+
 Run the server
 ```
 uvicorn main:app
