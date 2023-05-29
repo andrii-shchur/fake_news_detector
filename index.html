@@ -14,11 +14,11 @@
         <form id="newsForm">
             <div class="form-group">
                 <label for="title">Article Title:</label>
-                <input type="text" class="form-control" id="title" required>
+                <input type="text" class="form-control" id="title">
             </div>
             <div class="form-group">
                 <label for="text">Article Text:</label>
-                <textarea class="form-control" id="text" rows="5" required></textarea>
+                <textarea class="form-control" id="text" rows="5"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Detect</button>
         </form>
@@ -31,8 +31,8 @@
             e.preventDefault();
             const title = $("#title").val().trim();
             const text = $("#text").val().trim();
-            if (title === "" || text === "") {
-                alert("Please enter both the title and text of the article.");
+            if (title === "" && text === "") {
+                alert("Please enter the title or text of the article.");
                 return;
             }
 
@@ -42,8 +42,7 @@
                 data: JSON.stringify({ title: title, text: text }),
                 contentType: "application/json",
                 success: function(response) {
-                    const result = response.detection;
-                    const verdict = result > 0.5 ? "Fake" : "False"
+                    const verdict = response.detection > 0.5 ? "Fake" : "False"
                     $("#result").html(`<h4>Verdict: <span class="badge badge-primary">${verdict}</span></h4>`);
                 },
             });
