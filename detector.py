@@ -14,8 +14,8 @@ from models import Article
 class Detector:
     def __init__(self, content: Article):
         self._content = content
-        self.one_hot_n = 5000
-        self.pad_length = 40
+        self.one_hot_n = 10000
+        self.pad_length = 200
         self._model = load_model('model')
         self.stopwords = set(stopwords.words('english'))
         self.lemmatizer = WordNetLemmatizer()
