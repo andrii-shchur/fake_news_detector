@@ -12,7 +12,7 @@ git clone https://github.com/andrii-shchur/fake_news_detector.git
 
 Install `pipenv`
 ```
-python -m pip install pipenv
+pip install pipenv
 ```
 
 Install dependencies from `Pipfile`
