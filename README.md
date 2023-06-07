@@ -34,3 +34,11 @@ uvicorn main:app
 Great! Now backend server is running on `http://localhost:8000`
 
 Let's debunk fake news using GUI! Open `index.html` using your favorite web-browser, and you're good to go💪
+
+# Other
+We faced some struggles with using loaded model in our web application. Model trained in runtime demonstrated great 
+performance, but when we tried to save the model and load it in our web application, it showed terrible results.
+
+Here are confusion matrices that demonstrate performance of two models:
+
+All attempts to load models are provided in [this file](attempts/attempts.py).
