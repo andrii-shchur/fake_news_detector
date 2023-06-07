@@ -22,9 +22,10 @@ class Detector:
 
     def _text_to_input(self, text: str):
         """
-        Converts article contents to # TODO:
+        Converts article contents to format suitable for model prediction
+
         :param text: article contents
-        :return: text converted to
+        :return: text converted to format suitable for model prediction
         """
         text = text.lower()
         text = re.sub('[^\s\w]|[\d]', '', text)
