@@ -15,12 +15,6 @@ from nltk.stem import WordNetLemmatizer
 
 from models import Article
 
-
-
-# self._model = pickle.load()
-
-# self._model = load_model('changed_dropout')
-# self._model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['accuracy'])
 class Detector:
     def __init__(self, content: Article):
         self._content = content
@@ -46,6 +40,7 @@ class Detector:
             self._model = pickle.load(f)
         # Method 5: by unpickling using joblib
         self._model = joblib.load('model.pkl')
+        # We also tried to compile model after loading in some cases
 
         self.stopwords = set(stopwords.words('english'))
         self.lemmatizer = WordNetLemmatizer()

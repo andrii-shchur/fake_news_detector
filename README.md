@@ -41,4 +41,17 @@ performance, but when we tried to save the model and load it in our web applicat
 
 Here are confusion matrices that demonstrate performance of two models:
 
-All attempts to load models are provided in [this file](attempts/attempts.py).
+<details open>
+  <summary>Model trained in runtime</summary>
+    <ol>
+    <img src="static/runtime.png" alt="Model trained in runtime">
+    </ol>
+</details>
+<details open>
+  <summary>Loaded model</summary>
+    <ol>
+    <img src="static/saved_model.png" alt="Loaded model">
+    </ol>
+</details>
+
+**All attempts to load models are provided in [this file](attempts/attempts.py).**
